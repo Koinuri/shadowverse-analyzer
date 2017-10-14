@@ -41,15 +41,11 @@ class Follower(Card):
 
     def Destroy(self):
         self.Owner.Shadow += 1
-        for i in range(0, len(self.Owner.Hand)):
-            if self.Owner.Hand[i] == self:
-                self.Owner.Hand.pop(i)
+        self.Owner.Board.remove(self)
         self.LastWord()
 
     def Banish():
-        for i in range(0, len(self.Owner.Hand)):
-            if self.Owner.Hand[i] == self:
-                self.Owner.Hand.pop(i)
+        self.Owner.Board.remove(self)
 
     @abstractmethod
     def Fanfare():
