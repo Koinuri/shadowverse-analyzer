@@ -21,14 +21,6 @@ class Card(ABC):
     def Banish(self):
         pass
         
-    @abstractmethod
-    def HandAuraCondition(self):
-        pass
-
-    @abstractmethod
-    def HandAuraEffect(self):
-        pass
-
 class Follower(Card):
     def __init__(self):
         super(Follower, self).__init__()
@@ -57,6 +49,34 @@ class Follower(Card):
 
     @abstractmethod
     def AuraCondition():
+        pass
+
+    @abstractmethod
+    def AuraCondition():
+        pass
+
+    @abstractmethod
+    def AuraEffect():
+        pass
+
+    @abstractmethod
+    def LastWord():
+        pass
+
+class Spell(Card)
+    def __init__(self):
+        super(Spell, self).__init__()
+
+    @abstractmethod
+    def Fanfare():
+        pass
+
+class Amulet(Card):
+    def __init__(self):
+        self.Countdown = -1
+
+    @abstractmethod
+    def Fanfare():
         pass
 
     @abstractmethod
